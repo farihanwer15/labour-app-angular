@@ -1,4 +1,4 @@
-<mat-sidenav-container class="sidenav-container">
+<!-- <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
 
@@ -32,22 +32,11 @@
       <span class="example-spacer"></span>
 
       <button mat-button [matMenuTriggerFor]="menu"><img src="../../../assets/cimg/user-avatar-1.png"
-          style="width: 40px;"></button>
+          style="width: 40px;"></button> -->
 
-      <mat-menu #menu="matMenu">
+      <!-- <mat-menu #menu="matMenu">
         <button mat-menu-item (click)="Logout" *ngIf="router.url.includes('dashboard')">Logout</button>
-      </mat-menu>
-
-      <button mat-raised-button [matMenuTriggerFor]="language">Lang</button>
-
-      <mat-menu #language="matMenu">
-        <button mat-menu-item>English</button>
-        <button mat-menu-item>Urdu</button>
-        <button mat-menu-item>Sindhi</button>
-        <button mat-menu-item>Punjabi</button>
-      </mat-menu>
-    </mat-toolbar>
-    <router-outlet></router-outlet>
+      </mat-menu> -->
     <!-- Add Content Here -->
-  </mat-sidenav-content>
-</mat-sidenav-container>
+  <!-- </mat-sidenav-content>
+</mat-sidenav-container> -->
