@@ -1,4 +1,4 @@
-<mat-sidenav-container class="sidenav-container">
+<!-- <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
 
@@ -21,7 +21,6 @@
     </mat-nav-list>
 
   </mat-sidenav>
-  <mat-sidenav-content>
     <mat-toolbar color="primary">
       <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" mat-icon-button
         class="example-icon" aria-label="Example icon-button with menu icon">
@@ -34,9 +33,8 @@
       <button mat-button [matMenuTriggerFor]="menu"><img src="../../../assets/cimg/user-avatar-1.png"
           style="width: 40px;"></button> -->
 
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item (click)="Logout()">Logout</button>
-      </mat-menu>
+      <!-- <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="Logout" *ngIf="this.router.url.includes[('dashboard')]">Logout</button>
+      </mat-menu> --> 
     <!-- Add Content Here -->
- </mat-sidenav-content>
-</mat-sidenav-container>
+<!-- </mat-sidenav-container> -->
