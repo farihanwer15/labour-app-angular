@@ -1,0 +1,39 @@
+<div class="register-form">
+    <div class="overlay" fxLayoutAlign="center center">
+        <mat-card class="card-width">
+            <mat-card-header fxLayout="column" fxLayoutAlign="center center">
+                <img src="../../assets/cimg/logo.png" style="width: 100px;">
+                <h3 class="head" fxLayoutAlign="center center">Lets get started</h3>
+                <p>Sign up to use our service</p>
+            </mat-card-header>
+
+            <mat-card-content>
+                <form [formGroup]="registrationForm">
+                    <mat-form-field appearance="standard" class="full-width" style="background-repeat: no-repeat;">
+                        <mat-label>Name</mat-label>
+                        <input matInput formControlName="name" type="text" required placeholder="Name">
+                    </mat-form-field>
+
+                    <mat-form-field appearance="standard" class="full-width">
+                        <mat-label>Password</mat-label>
+                        <input matInput formControlName="password" required type="password" minlength="6" maxlength="15" placeholder="Password">
+                    </mat-form-field>
+
+                    <mat-form-field appearance="standard" class="full-width">
+                        <mat-label>Types</mat-label>
+                        <mat-select formControlName="type_id" required>
+                            <mat-option *ngFor="let item of result"  [value]="item.id">{{item.name}} </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="standard" class="full-width">
+                        <mat-label>Phone</mat-label>
+                        <input matInput formControlName="phone" required type="number" maxlength="11"  placeholder="Phone">
+                    </mat-form-field>
+                    <button mat-flat-button class="sign-btn" color="accent" (click)="signUp()" m started>Submit</button>
+                    <h4>Sign in to<a href="#"> existing account</a></h4>
+                </form>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

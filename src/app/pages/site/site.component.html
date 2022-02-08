@@ -1,0 +1,47 @@
+<div class="site-table">
+  <div fxLayout="row" fxLayoutAlign="space-between">
+    <h1>Sites</h1>
+    <button class="add-btn" mat-raised-button color="warn" (click)="addSiteDialog()">
+      <span class="material-icons">
+        add
+      </span>
+      Add Sites
+    </button>
+  </div>
+  <mat-progress-bar *ngIf="LoadingTerm" mode="query"></mat-progress-bar>
+  <table mat-table [dataSource]="dataSource" class="site-table-div">
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="position">
+      <th mat-header-cell *matHeaderCellDef> Id. </th>
+      <td mat-cell *matCellDef="let item; let i = index;"> {{i+1}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let item"> {{item.name}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="site_address">
+      <th style="width: 50%;" mat-header-cell *matHeaderCellDef> Site address </th>
+      <td colspan="1" mat-cell *matCellDef="let item"> {{item.site_address}} </td>
+    </ng-container>
+
+    <!-- Actions Column -->
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef> Action </th>
+      <td mat-cell *matCellDef="let item">
+        <button mat-mini-fab color="accent" aria-label="Edit Site">
+          <span class="material-icons" (click)="deleteSite(item.id)">delete</span>
+        </button>
+        <button mat-mini-fab color="primary" aria-label="Edit Site" (click)="editData(item)">
+          <span class="material-icons">create</span>
+        </button>
+      </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>

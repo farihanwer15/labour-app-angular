@@ -1,0 +1,129 @@
+@use '@angular/material' as mat;
+@import '@angular/material/theming';
+@include mat.core();
+
+$mat-OrangeColor: (
+  50: #FE5A0E,
+  100: #FE5A0E,
+  200: #FE5A0E,
+  300: #FE5A0E,
+  400: #FE5A0E,
+  500: #FE5A0E,
+  600: #FE5A0E,
+  700: #FE5A0E,
+  800: #FE5A0E,
+  900: #FE5A0E,
+  A100: #FE5A0E,
+  A200: #FE5A0E,
+  A400: #FE5A0E,
+  A700: #FE5A0E,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $light-primary-text,
+    400: $light-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $light-primary-text,
+    A400: $light-primary-text,
+    A700: $light-primary-text,
+  )
+);
+
+$mat-WoodenColor: (
+  50: #712A14,
+  100: #712A14,
+  200: #712A14,
+  300: #712A14,
+  400: #9F5537,
+  500: #B36647,
+  600: #B36647,
+  700: #B36647,
+  800: #B36647,
+  900: #B36647,
+  A100: #A15A32,
+  A200: #A15A32,
+  A400: #A15A32,
+  A700: #A15A32,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $light-primary-text,
+    400: $light-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $light-primary-text,
+    A400: $light-primary-text,
+    A700: $light-primary-text,
+  )
+);
+
+
+$mat-BlueColor: (
+  50: #0E2B5C,
+  100: #0E2B5C,
+  200: #0E2B5C,
+  300: #0E2B5C,
+  400: #0E2B5C,
+  500: #0E2B5C,
+  600: #0E2B5C,
+  700: #0E2B5C,
+  800: #0E2B5C,
+  900: #0E2B5C,
+  A100: #0E2B5C,
+  A200: #0E2B5C,
+  A400: #0E2B5C,
+  A700: #0E2B5C,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $light-primary-text,
+    400: $light-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $light-primary-text,
+    A400: $light-primary-text,
+    A700: $light-primary-text,
+  )
+);
+
+
+$candy-app-primary: mat.define-palette(mat.$indigo-palette);
+$candy-app-accent:  mat.define-palette($mat-BlueColor, A200, A100, A400);
+$candy-app-theme:   mat.define-light-theme((
+ color: (
+   primary: $candy-app-primary,
+   accent: $candy-app-accent,
+ )
+));
+
+$my-theme-primary: mat.define-palette($mat-OrangeColor);
+$my-theme-accent:  mat.define-palette($mat-BlueColor, A200, A100, A400);
+$my-theme-warn:    mat.define-palette(mat.$red-palette);
+
+$my-theme: mat.define-light-theme($my-theme-primary,$my-theme-accent, $my-theme-warn);
+
+// $candy-app-theme:   mat-light-theme((
+//  color: (
+//    primary: $candy-app-primary,
+//    accent: $candy-app-accent,
+//  )  
+// ));
+
+
+@include mat.all-component-themes($my-theme);

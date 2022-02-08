@@ -1,0 +1,35 @@
+.site-table{
+  padding: 40px 10px;
+
+  .add-btn{
+    background-color: #FDB42A;
+
+    span{
+      font-size: 20px;
+    }
+  }
+
+  table{
+    width: 100%;
+    margin-top: 20px;
+   }
+   table td button{
+     margin: 0 5px;
+     height: 35px;
+     width: 35px;
+   }
+   table td button span{
+     font-size: 15px !important;
+     line-height: 15px !important;
+   }
+  ::ng-deep table td button .mat-button-wrapper{
+    padding: 0 !important;
+    line-height: 5px !important;
+  }
+   table .btn-delete{
+     
+   }
+}
+
+ 
+ 

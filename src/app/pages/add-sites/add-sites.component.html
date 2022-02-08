@@ -1,0 +1,18 @@
+<mat-dialog-content class="mat-typography">
+  <form [formGroup]="siteForm">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name" placeholder="Enter site name" value="">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Site Address</mat-label>
+      <input matInput formControlName="site_address" placeholder="Enter site location" value="">
+    </mat-form-field>
+    <button class="example-full-width" mat-raised-button color="primary" (click)="submitAddSite()"[disabled]="!siteForm.valid">{{!data?"Submit":"update"}}</button>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <div mat-dialog-actions>
+    <button mat-raised-button color="accent" mat-dialog-close>Close</button>
+  </div>
+</mat-dialog-actions>
